@@ -1,9 +1,15 @@
 .container{
-    margin-left: 10%;
+    padding-left: 10%;
+    margin-top: 5%;
 }
 .table{
-    margin-top: 5%;
+    padding-top: 10%;
 }
 .form-group{
     padding: 2%;
+}
+.table-edit{
+    
+    margin-top: 5%;
+
 }

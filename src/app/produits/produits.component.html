@@ -25,7 +25,7 @@
                 <td> <input class="form-control" type ="text" placeholder="prix" name="prix" [(ngModel)]="produitCourant.prix"/> </td>
             </tr>
         </table>
-        <table class="table">
+        <table class="table-edit">
             <tr>
                 <td [align]="'center'"  >
                     
@@ -64,7 +64,7 @@
                 <td> {{p.designation}}</td>
                 <td> {{p.prix}}</td>
                 <td>
-                    <button class="btn btn-warning" (click)="selectionnerProduit(p) "><i class="bi bi-pen"></i>
+                    <button class="btn btn-dark" (click)="selectionnerProduit(p) "><i class="bi bi-pen"></i>
 
                         Editer
                     </button>
