@@ -1,0 +1,94 @@
+{
+  "produits": [
+    {
+      "id": 5,
+      "code": "E345",
+      "designation": "Bureau",
+      "prix": "150"
+    },
+    {
+      "id": 25,
+      "code": "36k",
+      "designation": "chaise long",
+      "prix": "300"
+    },
+    {
+      "id": 256,
+      "code": "u85",
+      "designation": "matelat",
+      "prix": "300"
+    },
+    {
+      "id": 22,
+      "code": "5gt",
+      "designation": "lit",
+      "prix": "300"
+    },
+    {
+      "id": 56,
+      "code": "hg8",
+      "designation": "table de nuit",
+      "prix": "65"
+    },
+    {
+      "id": 2563,
+      "code": "tp58",
+      "designation": "tapis",
+      "prix": "90"
+    },
+    {
+      "id": 524,
+      "code": "lk8",
+      "designation": "porte",
+      "prix": "125"
+    },
+    {
+      "id": 1125,
+      "code": "jh8",
+      "designation": "housse",
+      "prix": "125"
+    },
+    {
+      "id": 1254,
+      "code": "5kj",
+      "designation": "tapi",
+      "prix": "25"
+    },
+    {
+      "id": 25641,
+      "code": "E345",
+      "designation": "coussin",
+      "prix": "120"
+    },
+    {
+      "id": 564,
+      "code": "hb2",
+      "designation": "armoire",
+      "prix": "500"
+    },
+    {
+      "id": 857,
+      "code": "hb3",
+      "designation": "table cuisine",
+      "prix": "450"
+    },
+    {
+      "id": 879451,
+      "code": "gh5",
+      "designation": "moquette",
+      "prix": "200"
+    },
+    {
+      "id": 56412,
+      "code": "hgb",
+      "designation": "rideau",
+      "prix": "120"
+    },
+    {
+      "id": 6215,
+      "code": "v5k",
+      "designation": "duvon",
+      "prix": "651"
+    }
+  ]
+}

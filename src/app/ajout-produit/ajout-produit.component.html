@@ -1,0 +1,37 @@
+<div class="container">
+<form #produitForm="ngForm" class="form-group">
+    <table>
+        <tr>
+            <td> Id: </td>
+            <td> <input class="form-control" required placeholder="id du produit" id="id" name="id" type="number" [(ngModel)]="nouveauProduit.id" required />
+            </td>
+        </tr>
+        <tr>
+            <td> Code: </td>
+            <td> <input class="form-control" required placeholder="code" type ="text" name="code" [(ngModel)]="nouveauProduit.code"/>
+            </td>
+        </tr>
+        <tr>
+            <td> Désignation: </td>
+            <td> <input class="form-control" required placeholder="designation" type ="text" name="designation" [(ngModel)]="nouveauProduit.designation"/> </td>
+        </tr>
+        <tr>
+            <td> Prix: </td>
+            <td> <input class="form-control" required type ="text" placeholder="prix" name="prix" [(ngModel)]="nouveauProduit.prix"/> </td>
+        </tr>
+    </table>
+    <table class="table" style="margin-top: 5%;">
+        <tr>
+            <td  >
+                <button type="submit"  class="btn btn-success" (click)="validerFormulaire(produitForm)"   [disabled]="!produitForm.form.valid" >ajouter <i class="bi bi-check-square"></i>
+                </button>
+
+                
+            </td>
+        </tr>
+        <tr><td>
+            <h3 style="color: green;">{{etatajout}}</h3>
+        </td></tr>
+    </table>
+</form>
+</div>
