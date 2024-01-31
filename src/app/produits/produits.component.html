@@ -24,12 +24,16 @@
                 <td> Prix: </td>
                 <td> <input class="form-control" type ="text" placeholder="prix" name="prix" [(ngModel)]="produitCourant.prix"/> </td>
             </tr>
+            <tr><td>Categorie:</td>
+                <td> <input class="form-control" required type="text" placeholder="categorie" name="categorie" [(ngModel)]="categorieCourante.libelle"/> </td>
+
+            </tr>
         </table>
         <table class="table-edit">
             <tr>
                 <td [align]="'center'"  >
                     
-                   <button type="submit" (click)="editerProduit(produitForm)" class="btn btn-primary" [disabled]="!produitForm.form.valid" >Modifier <i class="bi bi-pencil"></i></button>
+                   <button type="button" (click)="editerProduit(produitForm)" class="btn btn-primary" [disabled]="!produitForm.form.valid" >Modifier <i class="bi bi-pencil"></i></button>
 
                     
                 </td>
@@ -47,6 +51,16 @@
 </div>
 <div class="container">
     <h1 style="color: blue;"> liste des produits </h1>
+    <label for="categorieFiltre">Filtrer par Catégorie:</label>
+    <select class="form-control" name="categorieFiltre" [(ngModel)]="categorieFiltre.id" >
+        <option value="" selected>Toutes les Catégories</option>
+        <option *ngFor="let c of categories" [ngValue]="c.id">{{ c.libelle }}</option>
+      </select>
+      
+  
+    
+  </div>
+  
     <table class="table table-striped">
         <thead>
             <tr>
@@ -54,28 +68,29 @@
                 <th>Code</th>
                 <th>Designation</th>
                 <th>Prix</th>
+                <th>Categorie</th>
                 <th colspan="2">Actions</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let p of produits">
-                <td> {{p.id}}</td>
-                <td> {{p.code}}</td>
-                <td> {{p.designation}}</td>
-                <td> {{p.prix}}</td>
+            <ng-container *ngFor="let p of produits">
+              <tr *ngIf=" p.categorie?.id === categorieFiltre.id || !categorieFiltre.id ">
+                <td>{{p.id}}</td>
+                <td>{{p.code}}</td>
+                <td>{{p.designation}}</td>
+                <td>{{p.prix}}</td>
+                <td>{{p.categorie?.libelle}}</td>
                 <td>
-                    <button class="btn btn-dark" (click)="selectionnerProduit(p) "><i class="bi bi-pen"></i>
-
-                        Editer
-                    </button>
+                  <button class="btn btn-dark" (click)="selectionnerProduit(p)">
+                    <i class="bi bi-pen"></i> Editer
+                  </button>
                 </td>
                 <td>
-                    <button class="btn btn-danger" (click)="supprimerProduit(p)"><i class="bi bi-trash"></i>
-
-                        Supprimer
-                    </button>
+                  <button class="btn btn-danger" (click)="supprimerProduit(p)">
+                    <i class="bi bi-trash"></i> Supprimer
+                  </button>
                 </td>
-            </tr>
-        </tbody>
+              </tr>
+            </ng-container>
+          </tbody>
     </table>
-</div>
